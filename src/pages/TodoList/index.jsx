@@ -47,6 +47,9 @@ function TodoList() {
           onEdit={(id) => {
             setEditedId(id);
           }}
+          onDelete={(id) => {
+            setLists((lists) => lists.filter((list) => list.id !== id));
+          }}
           lists={lists}
         />
       </div>
